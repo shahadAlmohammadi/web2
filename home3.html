@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+  <title>home page</title>
+  <style>
+    p {
+      display: inline;
+    }
+
+    .main {
+      background-color: rgba(201, 176, 176, 0.3);
+      padding: 70px;
+      box-shadow: 2px 5px 30px rgb(205, 189, 189);
+
+
+
+    }
+
+
+    .animation {
+      width: 450px;
+      color: rgb(4, 10, 4);
+      left: 1200px;
+      font-size: 28px;
+      font-weight: bolder;
+      position: relative;
+      animation: myfirst 5s linear 1s infinite;
+      animation-direction: alternate-reverse;
+
+      text-align: center;
+    }
+
+    @keyframes myfirst {
+      0% {
+        color: rgb(59, 55, 49);
+        left: 1200px
+      }
+
+      25% {
+        color: rgb(82, 81, 80);
+      }
+
+      50% {
+        color: rgb(101, 127, 127);
+      }
+
+      100% {
+        color: rgb(165, 165, 117);
+        left: 0
+      }
+    }
+
+    body {
+      background-image: url(img/backgroung.jpeg);
+
+    }
+
+    .h {
+      width: 200px;
+      height: 50;
+    }
+
+    .h:hover {
+      height: 250px;
+    }
+
+    .h {
+      width: 200;
+      height: 200;
+
+    }
+
+    .h:hover {
+      width: 250px;
+    }
+
+    h3,
+    p {
+      color: black;
+    }
+  </style>
+  
+  <script>
+
+    $(document).ready(function () {
+      $("#book").hide();
+      $("#button").click(function () {
+
+        $("#book").slideToggle(1000);
+        $("#book").fadeIn(slow);
+      });
+
+    });
+
+  </script>
+  <script>
+    function initMap() {
+      // m = new google.maps.Map(document.getElementById("ma"), { zoom: 8, center: { lat: -34.397, lng: 150.644 }  } );
+      navigator.geolocation.getCurrentPosition(onSuccess);
+      function onSuccess(position) {
+          var uluru = { lat: position.coords.latitude, lng: position.coords.longitude };
+          var mymap = new google.maps.Map(document.getElementById('ma'), { zoom: 16, center: uluru });
+          var marker = new google.maps.Marker({ position: uluru, map: mymap });
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+
+
+
+  <!-- Navbar  -->
+  <div class="w3-to">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" id="home" class="w3-bar-item w3-button w3-wide fa fa-book "
+        style="color: rgb(68, 75, 80);">store</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-left w3-hide-small ">
+
+        <a href="#about" class="w3-bar-item w3-button">about</a>
+        <a href="home.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> home</a>
+        <a href="ourProduct.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> our product</a>
+        <a href="buy.html" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> buy</a>
+        <a href="search.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> serch product</a>
+        <a href="shopcart.html" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> my cart</a>
+      </div>
+      <a href="#" class="w3-bar-item w3-button w3-right" style="text-align: right;">log out</a>
+      <!--فين يوديني اذا بخرج-->
+    </div>
+  </div>
+  <h2 class="animation"> hello <span id="result"> </span>,today reader tomorrow leader</h2>
+  <!-- Carousel -->
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/header2.jpg" alt="" width="100%" height="500">
+        <div class="carousel-caption">
+          <h3> “Think before you speak. Read before you think.” </h3>
+          <p>- Fran Lebowitz</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/header.jpg" alt="" width="100%" height="500">
+        <div class="carousel-caption">
+          <h3>“The more that you read, the more things you will know. The more that you learn, the more places you"ll
+            go.”</h3>
+          <p> - Dr. Seuss</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="img/header3.jpg" alt="" width="100%" height="500">
+        <div class="carousel-caption">
+          <h3>Books are mirrors: you only see in them what you already have inside you</h3>
+          <p>― Carlos Ruiz Zafón</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+
+
+  <!-- jumbotorn -->
+  <div class="jumbotorn text-center p-5 w3-text-white" id="about" style="background-color: rgba(148, 137, 144, 0.644);">
+    <h1 class="text" style="color: rgb(37, 37, 30);">reading store </h1>
+    <p class="text" style="font-weight: bolder; color: rgb(15, 15, 13);">We have many different books and we also
+      provide additional services. Our store features distinctive and unique books</p>
+  </div>
+  <br>
+
+  <!-- our book -->
+  <div class="row ">
+    <div class="col-sm-8 left-floated">
+      <div class="container mt-3 m-2">
+        <table class="table table-striped main">
+          <thead>
+            <tr>
+              <th colspan="3" class="text-center">OUR BOOKS</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="book/book1.jpg" style="size: 30%;" class="h" alt=""></td>
+              <td><img src="book/book8.jpg" style="size: 30%;" class="h" alt=""></td>
+              <td><img src="book/book7.jpg" style="size: 30%;" class="h" alt=""></td>
+              <td><img src="book/book6.jpg" style="size: 30%;" class="h" alt=""></td>
+            </tr>
+            <tr>
+              <td><img src="book/book9.jpg" style="size: 30%;" class="h" alt=""></td>
+              <td><img src="book/book10.jpg" style="size: 30%;" class="h" alt=""></td>
+              <td><img src="book/book11.jpg" style="size: 30%;" class="h" alt=""></td>
+              <td><img src="book/book12.jpg" style="size: 30%;" class="h" alt=""></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <img src="img/boybook.jpeg" style="margin-right: 300px;" alt="">
+    </div>
+  </div>
+
+  <!-- sales -->
+
+  <button id="button" class="btn"
+    style="padding-left: 45%; padding-right: 78%; text-align: center;background-color: rgb(114, 105, 105);">Discount
+    item
+  </button>
+
+  <div class="text-center" id="book">
+    <div class="main">
+      <label for="discount" style="background-color: rgb(212, 68, 68); padding-left:20% ; padding-right:20%;"> 10%
+        off</label> <br>
+      <p> price : 30 SAR <sup><del>60</del></sup></p> <br>
+      <img src="book/book2.jpg" alt="" width="20%" height="20%">
+    </div>
+  </div>
+
+
+  <hr>
+  <!-- service -->
+  <!-- توحيدهم زي بعض  -->
+  <div class="w3-container text-center" style="padding-left:15px; height:50%;" id="team">
+    <h3 class="w3-center">Our Service</h3>
+    <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <div class="w3-container">
+            <img src="img/24-hours.png" style='font-size:70px;width: 30%;padding-top: 35%;'>
+            <h3 style="padding-bottom: 30%;"> We are here for you 24/7</h3>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <div class="w3-container" style="padding: 10%;">
+
+            <img src="img/buy-home.png" style='font-size:70px;width: 30%;padding-top: 30%;'>
+            <h3>For your convenience, we have payment upon receipt</h3>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+
+          <img src="img/reading.png" style='font-size:70px;width: 30%;padding-top: 35%; '>
+          <div class="w3-container">
+            <h3 style="padding: 10%;">Mike Ross</h3>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+
+          <img src="img/search.png" style='font-size:70px;width: 30%;padding-top: 20%;'>
+          <div class="w3-container">
+            <h3 style="padding: 10%;">If you are looking for a specific book, you can browse easily</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <div class="w3-container text-center" style="padding:128px 16px" id="team">
+    <h3 class="w3-center">THE TEAM</h3>
+    <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <div class="w3-container">
+
+            <img src="img/person.png" class='rounded-circle' style='font-size:70px;width: 30%;padding-bottom: 10px;'>
+            <h3>Shahad mohammed</h3>
+            <p class="w3-opacity"> CEO & Founder</p>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i><a
+                  href="shahad556@hotmail.com">Contact</a></button></p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <div class="w3-container">
+
+            <img src="img/person.png" class='rounded-circle' style='font-size:70px;width: 30%;padding-bottom: 10px;'>
+            <h3>Anja Doe</h3>
+            <p style="padding-bottom:20%;" class="w3-opacity">Art Director</p>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i><a href="art@hotmail">
+                  Contact</a></button></p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+
+          <img src="img/person.png" class='rounded-circle' style='font-size:70px; width: 30%;'>
+          <div class="w3-container">
+            <h3>Mike Ross</h3>
+            <p class="w3-opacity" style="padding-bottom: 10%;">Web Designer</p>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i><a
+                  href="mike@hotmail.com"> Contact </a></button></p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+
+          <img src="img/person.png" class='rounded-circle' style='font-size:70px;width: 30%;'>
+          <div class="w3-container">
+            <h3>Dan Star</h3>
+            <p class="w3-opacity">Designer</p>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i><a href="dan@hotmail.com">
+                  Contact </a></button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64">
+    <!-- Contact Section -->
+    <div class="row margin-top-4 m-5 align-items-center">
+      <div class="col-md-6">
+        <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+          <h3 class="w3-center">CONTACT</h3>
+          <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+          <div style="margin-top:48px">
+            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>medina, KSA</p>
+            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone:+966 151515</p>
+            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email:shahd@gmail.com</p>
+            <br>
+          </div>
+        </div>
+
+
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-snapchat w3-hover-opacity"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Powered by Shahad mohammed AL-mohammadi</p>
+      </div>
+      <div class="col-md-6">
+        <div id="ma"></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+  </script>
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoLVOv6pfvrJ2NX4rezpyO9zxqxXAV5eo&callback=initMap"
+  async></script>
+</body>
+
+</html>

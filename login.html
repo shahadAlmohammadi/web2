@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>login</title>
+  <style>
+    label {
+      color: white;
+      font-weight: bolder;
+    }
+
+    a {
+      text-decoration: none;
+      color: aliceblue;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <div class="row container-fluid ">
+    <div class="col-sm-3">
+    </div>
+
+    <div class="mid col-sm-6 main ">
+      <h1 class="text-center " style="color: azure; ">Login</h1>
+      <form action="" method="post" ID="LoginForm">
+        <div class="form-group">
+          <label for="username">Username :</label>
+          <input type="text" name="username" class="form-control" placeholder="Shahad01" id="nn" maxlength="12" required
+            autocomplete="off" />
+        </div>
+        <div class="form-group">
+          <label for="password">password :</label>
+          <input type="password" name="password" class="form-control" id="pp" placeholder="********" required
+            autocomplete="off" />
+        </div>
+
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="cc" value="Remeber" checked="true">
+          <label class="form-check-label" for="agree">Remeber</label>
+        </div>
+        <label for="">Not registerd?</label>
+        <a href="register.html" style="color: aqua;">register</a>
+        <button type="submit" class="btn btn-success pl-4 pr-4 btn-block">
+          <a href="home.html">
+            Login
+          </a>
+        </button>
+
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+
+</body>
+
+<script>
+
+  nn.value = localStorage.getItem("username");
+  pp.value = localStorage.getItem("pass");
+
+  document.getElementById("LoginForm").onsubmit = function (e) {
+    var enterUser = document.getElementById('nn').value;
+    var enterpwd = document.getElementById('pp').value;
+
+    var getUsername = localStorage.getItem('username');
+    var getpwd = localStorage.getItem('password');
+
+    if (enterUser == getUsername) {
+      if (enterpwd == getpwd) {
+        alert("succefully");
+        document.querySelector("form").action = "home.html"
+      }
+      else {
+        alert("Worng password");
+        document.querySelector("form").action = "login.html"
+      }
+    }
+    else {
+      alert("wrong username and password");
+      document.querySelector("form").action = "login.html"
+    }
+    if (cc.checked == true) {
+      localStorage.setItem("username", nn.value);
+      localStorage.setItem("password", pp.value);
+    } else {
+      localStorage.setItem("username", "");
+      localStorage.setItem("password", "");
+    }
+
+  }
+
+
+</script>
+
+
+</script>
+
+</html>

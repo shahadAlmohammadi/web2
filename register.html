@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <style>
+    a{
+      text-decoration: none;
+      color: aliceblue;
+    }
+    .m {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 70px;
+      width: 50%;
+      margin-right: 80%;
+      color: aliceblue;
+      box-shadow: 2px 5px 30px rgb(255, 255, 255);
+      margin-left: 25%;
+
+
+    }
+
+    label {
+      color: white;
+      font-weight: bolder;
+    }
+  </style>
+  <script>
+    function passvalue() {
+      var firstname = document.getElementById("txt").value;
+      localStorage.setItem("textvalue", firstname);
+      return false;
+    }
+  </script>
+
+
+</head>
+
+<body>
+  <div class="row container-fluid ">
+    <div class="col-md-3">
+    </div>
+
+    <div class="mid col-md-6 m ">
+      <h1 class="text-center" style="color: azure;">Registration here</h1>
+      <form action="home.html" method="post">
+        <div class="form-group">
+          <label for="username">Username :</label>
+          <input type="text" name="username" id="txt" class="form-control" placeholder="Shahad01" />
+        </div>
+        <div class="form-group">
+          <label id="p1" for="pswd1">password :</label>
+          <input type="password" id="password" class="form-control" placeholder="****" required />
+        </div>
+        <div class="form-group">
+          <label id="p2" for="pswd2">Confirm password :</label>
+          <input type="password" id="pswd2" class="form-control" placeholder="****" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" name="email" placeholder="shahad@gmail.com" />
+        </div>
+        <div class="form-group">
+          <label for="age">Age :</label>
+          <input type="number" class="form-control" name="subject" placeholder="21" min="10" max="100" />
+        </div>
+        <div class="form-group">
+          <label for="Date">Date :</label>
+          <input type="date" class="form-control" name="Date" placeholder="04/01/2020" required />
+        </div>
+
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="checkbox">
+          <label class="form-check-label" for="agree " id="agree">i agree</label>
+        </div>
+        <button type="button" class="btn btn-success pl-4 pr-4"
+          onclick="saveregister();matchPassword();isChecked();passvalue">
+          <a href="home.html">
+          Register
+        </a></button>
+        <input type="reset" value="Clear" class="btn btn-danger pl-4 pr-4">
+
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+
+  </form>
+
+
+  <script>
+    function matchPassword() {
+      var pw1 = document.getElementById("pswd1").value;
+      var pw2 = document.getElementById("pswd2").value;
+      if (pw1 != pw2) {
+        alert("Passwords did not match");
+        document.getElementById("p1").style.color = 'red';
+        document.getElementById("p2").style.color = 'red';
+      } 
+    }
+
+    function isChecked() {
+      if (document.getElementById("checkbox").checked) {
+      } else {
+        alert("you must check");
+        document.getElementById("agree").style.color = 'red';
+      }
+    }
+    function passvalue() {
+      var name=document.getElementById("nn").value;
+       localStorage.setItem("username",name)
+        }
+
+  
+        function saveregister() {
+            var user_name = document.getElementById("txt").value;
+            localStorage.setItem('username', user_name);
+            var password = document.getElementById("password").value;
+            localStorage.setItem('password', password);
+        }
+      
+  </script>
+</body>
+
+</html>

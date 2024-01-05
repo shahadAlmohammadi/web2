@@ -1,0 +1,91 @@
+[
+    {
+      "id": 1,
+      "bookName": "special Definitions",
+      "description": "Life teaches us many things, some remain in our memory, while we forget the others, but some are stored in the unconscious accompanying man until his death, so the author tries as a person who has undergone many experiences and positions to form a world of definitions of some terms and vocabulary, and sets a definition of his perspective. The result of the definitions of some terms contained in this book based on the thought and perspective and the personal vision of the author, and framed in the form of a book to give the reader who is different or consistent with what he reads here –or any book - because the difference is the richness of humanity give benefits everyone.",
+      "image": "book/book1.jpg",
+      "price": 60,
+      "authorName": "Talib Ghuloom Talib"
+    },
+    {
+      "id": 2,
+      "bookName": "Speed Reading Question and Answer",
+      "description": "I have been blessed with a long life. A jack-of-all-trades and master of some. From tinker to truck driver, life is the best on-the-job training program ever devised. Life presents a new learning experience with each sunrise. We must make the most of each one. As you near the end of life's road being tired, worn out, and weary, you still try to find purpose. You look for any light at the end of the tunnel; not seeing one, you still move on. Human nature pulls, pushes, and prods us forward. Throwing in the towel is not an option. My life of trials and tribulations has been 55 plus years in the making, and it only seemed to strengthen me. My purpose in life has to be honoring the memory of my ancestors, who gave so much to prepare the way for me. May they all rest in peace, knowing they ran their race well.",
+      "image": "book/book2.jpg",
+      "price": 45,
+      "authorName": "Ahmed Ragheb"
+    },
+    {
+      "id": 3,
+      "bookName": "And Then There Were None",
+      "description": "Agatha Christie's world-famous mystery thriller, reissued with a striking new cover designed to appeal to the latest generation of Agatha Christie fans and book lovers. Ten strangers, apparently with little in common, are lured to an island mansion off the coast of Devon by the mysterious U.N.Owen. Over dinner, a record begins to play, and the voice of an unseen host accuses each person of hiding a guilty secret. That evening, former reckless driver Tony Marston is found murdered by a deadly dose of cyanide. The tension escalates as the survivors realise the killer is not only among them but is preparing to strike again...and again...Author Biography: Agatha Christie was born in Torquay in 1890 and became, quite simply, the best-selling novelist in history. Her first novel, The Mysterious Affair at Styles, written towards the end of the First World War, introduced us to Hercule Poirot, who was to become the most popular detective in crime fiction since Sherlock Holmes. She is known throughout the world as the Queen of Crime. Her books have sold over a billion copies in the English language and another billion in over 100 foreign countries. She is the author of 80 crime novels and short story collections, 19 plays, and six novels under the name of Mary Westmacott.",
+      "image": "book/book3.jpg",
+      "price": 60,
+      "authorName": "Agatha Christie"
+    },
+    {
+      "id": 4,
+      "bookName": "The Girl With The Blue Hair",
+      "description": "A collection of poems in English that takes the reader on an exploratory journey through letters written to people, letters of love and loss, and letters of the journey of feelings with their joys and sorrows. Poems that reflect her time, and others written in cities around the world that carry events that are colored in different colors, like the color of the ocean and the sky. The book takes you on a journey of maturity until it ends with a poem that addresses life, written by an eight-year-old.",
+      "image": "book/book4.jpg",
+      "price": 35,
+      "authorName": "Ameera Alnujaim"
+    },
+    {
+      "id": 5,
+      "bookName": "when the sidewark ends",
+      "description": "Set in modern day Alexandria, this is a story of four friends who, against the backdrop of their ancient city and the shifting tides in Egypt, must grapple with questions of identity, tradition, freedom, development and change. Noora is dreaming of falling in love and getting married to a man who would fit society’s standards for a suitable match. When she is unsuccessful, she flees home. But will she be able to find true love elsewhere if she sticks to the same rules? Meeran is yearning to escape from her parent’s tyranny, even if this means betraying her friend and voluntarily sentencing herself to a different kind of prison, a matrimonial one that her parents approve of. Can the sort of marriage she is seeking save her? Noha is married and pregnant with her first child whom she believes will make her life meaningful and joyful again. She had been forced by her husband to sacrifice a career she loved and to turn to religion for consolation. Will she find the solace she seeks in her baby and her mother-in-law’s popular yet regressive idea of religion? Mona has been married the longest and has two kids. Her life seems like every girl’s dream come true. However, Mona is harboring a secret that if uncovered could put her marriage in jeopardy and risk hurting her family. But does she really want to save her marriage? And won’t her family get hurt anyway?",
+      "image": "book/book5.jpg",
+      "price": 40,
+      "authorName": "Dina Leheta"
+    },
+    {
+      "id": 6,
+      "bookName": "Tales from Saudi Arabia 2018",
+      "description": "This collection includes ten short stories collected in the year of 2018. It varies in themes and topics, thus taking the reader on a journey throughout Saudi Arabia, from the heights of its mountains to the vastness of its deserts",
+      "image": "book/book6.jpg",
+      "price": 20,
+      "authorName": "Ameera Alnujaim"
+    },
+    {
+      "id": 7,
+      "bookName": "Saudi Village 2018",
+      "description": "Regardless of their geographical location on the map, Saudi village communities share a similar identity at the individual level, as reflected in the villagers’ similar desire to either belong to a group or break from it in search of a different life. However, Saudi villages also differ in their environment and terrain, thus influencing people’s behaviors and customs diversely. This edition includes ten short stories that took place in Saudi villages. It aims to showcase the culture of Saudi villages to local and international readers through this collection’s documentation of waning village customs, traditions, and behaviors.",
+      "image": "book/book7.jpg",
+      "price": 50,
+      "authorName": "Ameera Alnujaim"
+    },
+    {
+      "id": 8,
+      "bookName": "Living With OCD",
+      "description": "This comprehensive guide is your trusted companion for navigating life with Obsessive-Compulsive Disorder (OCD). Packed with practical tips, empowering strategies, and heartfelt stories, this book offers a holistic approach to managing and finding solace amidst the challenges of OCD. Explore the power of exercise, mindfulness, music, food, and more as you discover a wealth of tools, strategies, and lifestyle changes tailored to your unique journey. Each chapter combines insightful theory with practical application, guiding you toward a path of healing and resilience. Drawing inspiration from real-life individuals who have conquered OCD’s challenges, you'll also find relatable stories that provide encouragement and hope. These personal accounts showcase the transformative power of integrating lifestyle changes into daily routines. Let this book be your guide on your journey to living a meaningful life with OCD. Empower yourself with knowledge, discover effective tricks, and unlock a brighter future filled with promise and resilience.",
+      "image": "book/book8.jpg",
+      "price": 50,
+      "authorName": "Nour Tabaza"
+    },
+    {
+      "id": 9,
+      "bookName": "i my shadow, and my partner",
+      "description": "Life is a journey. It has its ups and downs. I wrote some thoughts during this journey that may reflect some facets of me, but not all! For sure, writing is an urge that I cannot live without, it is the air I breathe when I am short of breath or breathing out…",
+      "image": "book/book9.jpg",
+      "price": 55,
+      "authorName": "Maya Abou Zahr"
+    },
+    {
+      "id": 10,
+      "bookName": "Be Unique",
+      "description": "We live in a world in which survival is only for the strongest. If you are not strong enough in life, you will fail to survive amongst the strong. Therefore, you must learn, train, and make changes and developments. You must make progress regularly and benefit from your experiences and mistakes and also from the experiences and mistakes of others, as we must benefit from others not only from ourselves. You are currently writing the story of your own life, minute by minute. So, make it a story worthy to be read.",
+      "image": "book/book10.jpg",
+      "price": 60,
+      "authorName": "Abdulhadi Taqi"
+    },
+    {
+      "id": 11,
+      "bookName": "Of Butterflies and Cocoons",
+      "description": "The author suffers from social anxiety disorder. Problem is, no one seems to quite understand what that is. What does social anxiety look like on the ground? In therapy? In day-to-day living? How can a therapist or a family member understand how our minds work? What can we do to fight this debilitating disorder? And what is it with scientists and speeches anyway? In a hilariously macabre journey of rainbows, unicorns and self-analysis, Hafsa shares her insight into what makes social anxiety tick, and what simple steps we can take to overcome it",
+      "image": "book/book11.jpg",
+      "price": 50,
+      "authorName": "Hafsa Tameez"
+    }
+    
+  ]

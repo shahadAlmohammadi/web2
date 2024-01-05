@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buy</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            width: 10%;
+            color: aliceblue;
+            box-shadow: 2px 5px 30px rgb(255, 255, 255);
+
+        }
+
+        .m {
+            margin-left: 7%;
+            margin-top: 9%;
+          
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light drop-shadow">
+        <a class="navbar-brand fa fa-book " href="#">Reading Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="home" href="home.html"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./ourProduct.html"><i class="fa fa-book"></i> Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./buy.html"><i class="fa fa-credit-card"></i> Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./search.html"><i class="fa fa-search"></i> Search Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./shopcart.html"><i class="fa fa-shopping-cart"></i> My Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"><i class="fa fa-envelope"></i> Contant</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-right">
+                <li><a href="login.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row container ">
+        <div class=" col-md-6 box m ">
+            <form method="post" onsubmit="return confirm(get_total());" action="./home.html">
+            <div class="form-check">
+                <h1 style="color: azure; text-align: center; ">Buy</h1>
+                <div class="box" style="padding-right:50% ;;">
+                    <label for="total" class="text-left" style="text-align:left; padding-left:1px;"> TOTAL </label>
+                    <p id="result"></p>
+                </div>
+            </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" value="visa" type="radio" name="buy" id="visa">
+                    <label class="form-check-label" for="visa">
+                        <img src="img/visa.png" alt="" width="10%">
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" value="paypal" type="radio" name="buy" id="paypal">
+                    <label class="form-check-label" for="paypal">
+                        <img src="img/paypal.png" alt="" width="15%">
+                    </label>
+                </div>
+             
+                <textarea name="textarea" cols="50" rows="5" placeholder="enter your comments"></textarea> <br>
+                <button type="submit" class="btn btn-success " id="btn" style="padding-left:30% ;padding-right: 30%;">submit</button>
+                    <!-- <button type="button" class="btn btn-success " id="btn" style="padding-left:30% ;padding-right: 30%;"
+                    onclick="submit()">submit</button> -->
+                </form>
+            </div>
+        
+        
+        <div class="col-md-4 ml-5 ">
+            <video  autoplay loop muted width="700" height="600">
+                <source src="book/buying.mp4" video="video/mp4" />
+            </video>
+        </div>
+    </div>
+
+
+    <script>
+
+        document.getElementById("result").innerHTML = localStorage.getItem("totalvalue");
+
+        // function confirm(){
+        //     alert('test');
+        // }
+
+
+        function get_total() {
+
+            let msg = '';
+            if (document.getElementById('visa').checked){
+                msg= "Total = " + localStorage.getItem("totalvalue") + " using " + document.getElementById('visa').value;
+                // alert("Total = " + localStorage.getItem("totalvalue") + " using " + document.getElementById('visa').value);
+            }else if(document.getElementById('paypal').checked){
+                msg = "Total = " + localStorage.getItem("totalvalue") + " using " + document.getElementById('paypal').value;
+                // alert("Total = " + localStorage.getItem("totalvalue") + " using " + document.getElementById('paypal').value);
+            } else {
+                // alert("You must select Payment Method");
+                msg = "You must select Payment Method";
+            }
+
+            return msg;
+        }
+        // if(confirm("total ="+ localStorage.getItem("totalvalue")+"using " +msg)==false){
+        //     e.preventDefault();
+        // }else {
+        // window.open("./home.html");
+        // }
+
+    </script>
+
+
+</body>
+
+</html>

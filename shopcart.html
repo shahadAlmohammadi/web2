@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Shop cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <!-- <div class="w3-to">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" id="home" class="w3-bar-item w3-button w3-wide fa fa-book "
+        style="color: rgb(68, 75, 80);">store</a>
+
+      <div class="w3-left w3-hide-small ">
+        
+      <a href="#about" class="w3-bar-item w3-button">about</a>
+        <a href="home.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> home</a>
+        <a href="ourProduct.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> our product</a>
+        <a href="buy.html" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> buy</a>
+        <a href="search.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"> </i> serch product</a>
+        <a href="shopcart.html" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> my cart</a>
+      </div>
+      <a href="#" class="w3-bar-item w3-button w3-right" style="text-align: right;">log out</a>
+    </div>
+  </div> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light drop-shadow">
+        <a class="navbar-brand fa fa-book " href="#">Reading Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="home" href="home.html"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./ourProduct.html"><i class="fa fa-book"></i> Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./buy.html"><i class="fa fa-credit-card"></i> Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./search.html"><i class="fa fa-search"></i> Search Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./shopcart.html"><i class="fa fa-shopping-cart"></i> My Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"><i class="fa fa-envelope"></i> Contant</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-right">
+                <li><a href="login.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main">
+        <table style="border: 0px;">
+            <tr>
+                <td><label for="book"> Enter book name</label></td>
+                <td><input type="text" id="tt"></td>
+            </tr>
+            <tr>
+                <td><label for="quantity">enter quantity </label></td>
+                <td><input type="number" id="num" size="5"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="add()" style="width: 100%;">Add</button>
+                </td>
+            </tr>
+        </table>
+
+        <div id="msg"></div>
+        <br>
+        <table id="tbl" class="'table"></table>
+        <button onclick="checkout();passvalue()"> check out</button>
+    </div>
+
+
+    <script>
+        pp = 0;
+        cartitems = [];
+
+
+        async function getprice() {
+            let response = await fetch("book.json");
+            let x = await response.json();
+            let found = false;
+            for (i = 0; i < x.length; i++) {
+                if (document.getElementById("tt").value.toLowerCase() ==
+                    x[i].bookName.toLowerCase()) {
+                    pp = x[i].price;
+                    d = x[i].description;
+                    found = true;
+                }
+            }
+            return found;
+        }
+
+
+        async function add() {
+            console.log(getprice());
+            if (await getprice() == true) {
+                console.log(tt.value);
+                console.log(pp);
+                console.log(num.value);
+                item = {
+                    name: tt.value,
+                    price: pp,
+                    quant: num.value,
+                    description: d,
+                };
+                cartitems.push(item);
+                display();
+                document.getElementById("msg").innerHTML = '';
+                tt.value = "";
+            } else {
+                document.getElementById("msg").innerHTML = 'no book was found';
+            }
+        }
+
+        function display() {
+            var ta = "my shopping cart <tr><th> name </th><th>price </th><th>quantity</th><th></th></tr>";
+            for (i = 0; i < cartitems.length; i++) {
+                ttname = cartitems[i].name;
+                ttprice = cartitems[i].price;
+                ttquant = cartitems[i].quant;
+                ta += "<tr><td>" + ttname + "</td><td>" + ttprice + "</td><td>" + ttquant + "</td><td><button name='" + ttname + "' onclick='del(this.name)'> delete </button> </td></tr>";
+            }
+            document.getElementById("tbl").innerHTML = ta;
+        }
+        function del(nn) {
+            for (i = 0; i < cartitems.length; i++) {
+                if (cartitems[i].name == nn) {
+                    cartitems.splice(i, 1);
+                }
+            }
+            display();
+        }
+        function checkout() {
+            tot = 0;
+            for (var i = 0; i < cartitems.length; i++) {
+                tot += cartitems[i].price * cartitems[i].quant;
+            }
+            if(confirm("you must pay "+ tot+" are you sure for submit ?")==false){
+                e.preventDefult();
+            }else{
+                document.location='buy.html'
+            }
+
+
+        }
+
+        function passvalue() {
+            var total = tot
+            localStorage.setItem("totalvalue", total);
+            return false;
+        }
+    </script>
+</body>
+
+</html>

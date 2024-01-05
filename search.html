@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>search</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            color: rgb(232, 232, 232);
+     
+        }
+
+        .t {
+            border: solid 1pt rgb(240, 235, 235);
+            border-collapse: collapse;
+        }
+
+        td {
+            border: solid 1pt rgb(96, 96, 96);
+            padding: 10pt;
+        }
+
+        th {
+            background-color: rgb(98, 91, 84);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Navbar  -->
+<div class="w3-to">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light drop-shadow">
+        <a class="navbar-brand fa fa-book " href="#">Reading Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" id="home" href="home.html"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./ourProduct.html"><i class="fa fa-book"></i> Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./buy.html"><i class="fa fa-credit-card"></i> Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./search.html"><i class="fa fa-search"></i> Search Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./shopcart.html"><i class="fa fa-shopping-cart"></i> My Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact"><i class="fa fa-envelope"></i> Contant</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav navbar-right">
+                <li><a href="login.html"><i class="fa fa-sign-out"></i> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main">
+        <label for="book">Enter Book Name </label><input type="search" id="tt"> <br>
+        <button onclick="show()">Search</button> <br><br>
+        <label for="detail">Detail</label>
+        <table id="tbl" class="table text-center table-striped table-borderd t"></table>
+    </div>
+</body>
+<script>
+
+
+    async function show() {
+        let response = await fetch("book.json");
+        let x = await response.json();
+        var tt = "<tr><th>book name </th><th>descrption</th><th>image</th><th>price</th></tr>";
+        for (i = 0; i < x.length; i++) {
+            if (document.getElementById("tt").value.toLowerCase() == x[i].bookName.toLowerCase()) {
+                tt += "<tr><td>" + x[i].bookName + "</td><td>" + x[i].description + "</td><td><img src=" + x[i].image + " height='120px'>" + "</td><td>" + x[i].price + "</td></tr>";;
+            }
+            document.getElementById("tbl").innerHTML = tt;
+        }
+    }
+
+
+</script>
+
+</html>

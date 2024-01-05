@@ -1,0 +1,5 @@
+- text value
+- register button
+- wampserver to validate form submit from buy.html to home.html
+- when not payment method selected it will submit the from to home if clicked OK
+- logout to be login if user is logged in
